@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2021-12-04T13:21:47.3392994Z;True|2021-12-03T02:35:41.1571138-03:00;True|2021-11-28T01:40:04.6326527-03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConexionSQL">
+      <Value>workstation id=LaLigaDatos.mssql.somee.com%3bpacket size=4096%3buser id=ivan365_SQLLogin_1%3bpwd=ofqquq534d%3bdata source=LaLigaDatos.mssql.somee.com%3bpersist security info=False%3binitial catalog=LaLigaDatos</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Web_Torneo.Models.AppDbContext">
+      <Value>workstation id=LaLigaDatos.mssql.somee.com%3bpacket size=4096%3buser id=ivan365_SQLLogin_1%3bpwd=ofqquq534d%3bdata source=LaLigaDatos.mssql.somee.com%3bpersist security info=False%3binitial catalog=LaLigaDatos</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,53 @@
+﻿nav {
+    background-color: rgb(255, 184, 53);
+}
+
+header {
+    width: 90%;
+    margin: 15vh auto 0 auto;
+}
+
+    header h1 {
+        font-size: 6rem;
+    }
+
+article {
+    width: 90%;
+    margin: auto;
+}
+
+    article section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3vh;
+        border-bottom: 1px rgba(0, 0, 0, 0.24) solid;
+    }
+
+        article section h3 {
+            font-size: 4rem;
+        }
+
+        article section .info_jugador {
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30vw;
+        }
+
+        article section span {
+            font-size: 3rem;
+        }
+
+
+
+
+@media (max-width:430px) {
+    article section .info_jugador {
+        margin-left: 10vw;
+        width: 40vw;
+    }
+}

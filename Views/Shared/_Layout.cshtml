@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link href="~/css/EstilosNavBar.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("css", false)
+</head>
+<body>
+    <nav class="menu" id="nav">
+        <a class="logo" asp-controller="Home" asp-action=""><img class="img_logo" id="logo" src="~/img/logopng.png" alt=""></a>
+        <ul class="enlaces" id="enlaces_menu">
+            <li><a asp-controller="Home" asp-action="">Inicio</a></li>
+            <li><a asp-controller="Home" asp-action="Fixture" asp-route-fechaNombre="1">Fixture</a></li>
+            <li><a asp-controller="Home" asp-action="Tabla_Posiciones">Posiciones</a></li>
+            <li><a asp-controller="Home" asp-action="Tabla_Goleadores" asp-route-tablaGoleadoresId="1">Goleadores</a></li>
+        </ul>
+        <button class="ham" id="ham">
+            <span class="linea_1"></span>
+            <span class="linea_2"></span>
+            <span class="linea_3"></span>
+        </button>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+<script src="~/js/Navbar.js"></script>
+@RenderSection("scripts", false)
+</html>

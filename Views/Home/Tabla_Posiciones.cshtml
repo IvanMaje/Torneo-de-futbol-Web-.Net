@@ -1,0 +1,45 @@
+﻿@Model List<Grupo>
+
+    @{
+        Layout = "_Layout";
+        ViewBag.Title = "Tabla_Posiciones";
+    }
+
+    @section css{
+        <link href="~/css/EstilosTablaPosiciones.css" rel="stylesheet" />
+    }
+    
+
+    <article>
+        @foreach (Grupo grupo in Model)
+        {
+            <div class="tabla">
+                <div class="tabla_titulo header_equipo">Nombre</div>
+                <div class="tabla_header">J</div>
+                <div class="tabla_header">G</div>
+                <div class="tabla_header">E</div>
+                <div class="tabla_header">P</div>
+                <div class="tabla_header">GA</div>
+                <div class="tabla_header">GE</div>
+                <div class="tabla_header">Dif</div>
+                <div class="tabla_header">Pts</div>
+
+                @foreach (Equipo equipo in grupo.Equipos)
+                {
+                    int jugados = equipo.Ganados + equipo.Empatados + equipo.Perdidos;
+                    int diferenciaGoles = equipo.GolesAFavor - equipo.GolesEnContra;
+
+
+                    <div class="tabla_item nombre_equipo"><a asp-controller="Home" asp-action="Equipo_Detalles" asp-route-equipoId="@equipo.Id">@equipo.Nombre</a></div>
+                    <div class="tabla_item">@jugados</div>
+                    <div class="tabla_item">@equipo.Ganados</div>
+                    <div class="tabla_item">@equipo.Empatados</div>
+                    <div class="tabla_item">@equipo.Perdidos</div>
+                    <div class="tabla_item">@equipo.GolesAFavor</div>
+                    <div class="tabla_item">@equipo.GolesEnContra</div>
+                    <div class="tabla_item">@diferenciaGoles</div>
+                    <div class="tabla_item">@equipo.Puntos</div>
+                }
+            </div>
+        }
+    </article>

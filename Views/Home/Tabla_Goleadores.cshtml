@@ -1,0 +1,29 @@
+﻿@Model List<Equipo>
+
+    @{
+    Layout = "_Layout";
+    ViewBag.Title = "Tabla_Goeladores";
+    }
+
+    @section css{
+    <link href="~/css/EstilosTablaGoleadores.css" rel="stylesheet" />
+    }
+
+    <article>
+        <div class="tabla_goleadores">
+            <div class="tabla_header nombre_header">Nombre</div>
+            <div class="tabla_header equipo_header">Equipo</div>
+            <div class="tabla_header goles_header">Goles</div>
+
+            @{ 
+                int i = 0;
+            }
+            @foreach (Jugador jugador in Model)
+            {
+                <div class="tabla_item nombre_jugador">@jugador.Nombre</div>
+                <div class="tabla_item nombre_equipo">@ViewBag.NombreEquipos[i]</div>
+                <div class="tabla_item goles">@jugador.cantidadGoles</div>
+                i++;
+            }
+        </div>
+    </article>

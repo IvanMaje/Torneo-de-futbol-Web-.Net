@@ -1,0 +1,69 @@
+﻿@Model List<Fechas>
+
+    @{
+        Layout = "_Layout";
+        ViewBag.Title = "Fixture";
+    }
+
+    @section css{
+        <link href="~/css/EstilosFixture.css" rel="stylesheet" />
+    }
+
+
+    <main>
+        <div class="seleccion_fecha">
+            <select onChange="window.location.href=this.value">
+                @foreach(Fecha fecha in Model){
+                    if(fecha.Nombre == ViewBag.fecha.Nombre) 
+                    {
+                        <option selected="true" disabled="disabled">@fecha.Nombre</option>
+                    }
+                    else 
+                    { 
+                        <option value="@fecha.Nombre">@fecha.Nombre</option>
+                    }
+                    }
+            </select>
+        </div>
+        <article>
+            <h2 class="fecha_titulo">@ViewBag.fecha.Nombre</h2>
+            @{
+                int i = 1;
+            }
+            @foreach (Partido partido in ViewBag.fecha.Partidos)
+            {
+                string golesEquipo1 = partido.SeJugo ? partido.GolesEquipo1.ToString() : "-";
+                string golesEquipo2 = partido.SeJugo ? partido.GolesEquipo2.ToString() : "-";
+                string figura = partido.SeJugo ? partido.JudadorDelPartido : "-";
+                
+                    if (i == 1)
+                    {
+
+
+                    <div class="partido primer_partido">
+                        <a class="equipo_1" asp-controller="Home" asp-action="Equipo_Detalles" asp-route-equipoId="@partido.Equipo1.Id">@partido.Equipo1.Nombre</a>
+                        <span class="resultado">@golesEquipo1</span>
+
+                        <span>:</span>
+
+                        <span class="resultado">@golesEquipo2</span>
+                        <a class="equipo_2" asp-controller="Home" asp-action="Equipo_Detalles" asp-route-equipoId="@partido.Equipo2.Id">@partido.Equipo2.Nombre</a>
+                        <span class="figura_del_partido">Figura del partido: @figura</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="partido">
+                        <a class="equipo_1" asp-controller="Home" asp-action="Equipo_Detalles" asp-route-equipoId="@partido.Equipo1.Id">@partido.Equipo1.Nombre</a>
+                        <span class="resultado">@golesEquipo1</span>
+                        <span>:</span>
+                        <span class="resultado">@golesEquipo2</span>
+                        <a class="equipo_2" asp-controller="Home" asp-action="Equipo_Detalles" asp-route-equipoId="@partido.Equipo2.Id">@partido.Equipo2.Nombre</a>
+                        <span class="figura_del_partido">Figura del partido: @figura</span>
+                    </div>
+                }
+                i++;
+            }
+
+        </article>
+    </main>

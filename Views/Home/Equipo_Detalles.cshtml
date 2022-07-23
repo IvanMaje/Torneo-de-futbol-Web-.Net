@@ -1,0 +1,34 @@
+﻿@Model Equipo
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Equipo_Detalles";
+}
+
+@section css{
+    <link href="~/css/EstilosEquipoDetalles.css" rel="stylesheet" />
+}
+
+@section scripts{
+
+    <script src="~/js/CambiarColorNavbar.js"></script>
+    <script src="~/js/Carrusel.js"></script>
+}
+
+
+<header>
+    <h1>@Model.Nombre</h1>
+</header>
+<article>
+    @foreach (Jugador jugador in Model.Jugadores)
+    {
+        <section>
+            <h3>@jugador.Nombre</h3>
+            <div class="info_jugador">
+                <span class="goles_jugador">@jugador.cantidadGoles goles</span>
+            </div>
+        </section>
+    }
+
+</article>
+

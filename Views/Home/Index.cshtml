@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Inicio";
+}
+
+@section css{
+    <link href="~/css/EstilosIndex.css" rel="stylesheet" />
+}
+
+@section scripts{
+
+    <script src="~/js/CambiarColorNavbar.js"></script>
+    <script src="~/js/Carrusel.js"></script>
+}
+
+<article>
+    <section>
+        <h1>Torneo de futbol 7</h1>
+        <p>Somos el unico torneo intercolegial de futbol 7. Actualmente estamos realizando uno en Berazategui. Pueden contactarse con nosotros por nuesto instagram.</p>
+    </section>
+</article>
+
+
+<div class="contenedor_carrusel">
+    <div class="carrusel" id="carrusel">
+        <div class="carrusel_imagen">
+            <img src="~/img/imagen1.png" />
+        </div>
+
+        <div class="carrusel_imagen">
+            <img src="~/img/imagen2.png" />
+        </div>
+
+        <div class="carrusel_imagen">
+            <img src="~/img/imagen3.png" />
+        </div>
+
+        <div class="carrusel_imagen">
+            <img src="~/img/imagen4.png" />
+        </div>
+
+        <div class="carrusel_imagen">
+            <img src="~/img/imagen5.png" />
+        </div>
+    </div>
+
+    <div class="carrusel_boton carrusel_boton_izquierda" id="boton_izquierdo"><</div>
+    <div class="carrusel_boton carrusel_boton_derecha" id="boton_derecho">></div>
+</div>

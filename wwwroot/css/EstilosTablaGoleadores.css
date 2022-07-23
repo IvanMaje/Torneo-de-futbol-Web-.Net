@@ -1,0 +1,52 @@
+﻿article {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    background-color: rgba(106, 103, 255, 0.11);
+}
+
+.tabla_goleadores {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: 7vh;
+    justify-items: center;
+    align-content: center;
+}
+
+.tabla_header {
+    font-size: 4rem;
+}
+
+.tabla_item {
+    font-size: 3rem;
+}
+
+.nombre_header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.equipo_header {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.nombre_jugador {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.nombre_equipo {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+@media (max-width:768px) {
+    .tabla_goleadores {
+        width: 100%;
+    }
+}

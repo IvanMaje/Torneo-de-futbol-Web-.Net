@@ -1,0 +1,105 @@
+﻿nav {
+    background-color: rgb(255, 184, 53);
+}
+
+main {
+    margin-top: 11vh;
+    width: 100%;
+}
+
+    main .seleccion_fecha {
+        width: 100%;
+        height: 7vh;
+        min-height: 70px;
+        background-color: rgb(226, 224, 224);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+        main .seleccion_fecha select {
+            width: 30%;
+            height: 60%;
+            font-size: 3rem;
+            margin-left: 2rem;
+        }
+
+    main article {
+        width: 100%;
+        min-height: calc(88vh - 70px);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 20px;
+        background-color: rgba(106, 103, 255, 0.11);
+    }
+
+        main article .fecha_titulo {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+
+
+.grupo_titulo {
+    font-size: 6rem;
+}
+
+main article .partido {
+    width: 100%;
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 50px;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    border-bottom: rgba(0, 0, 0, 0.288) 1px solid;
+    padding-bottom: 2rem;
+}
+
+.primer_partido {
+    border-top: rgba(0, 0, 0, 0.288) 1px solid;
+    padding-top: 1.5rem;
+}
+
+
+
+
+
+.partido .equipo_1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.partido .equipo_2 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.partido .resultado {
+    background-color: white;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partido .figura_del_partido {
+    grid-column-start: 1;
+    grid-column-end: 10;
+}
+
+@media (max-width:340px) {
+    html {
+        font-size: 5px;
+    }
+}

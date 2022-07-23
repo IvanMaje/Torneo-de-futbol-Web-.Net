@@ -1,0 +1,8 @@
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.csproj.AssemblyReference.cache
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.AssemblyInfoInputs.cache
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.AssemblyInfo.cs
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.csproj.CoreCompileInputs.cache
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.RazorAssemblyInfo.cache
+C:\Users\ivanm\source\repos\Web_Torneo\Web_Torneo\obj\Debug\netcoreapp3.1\Web_Torneo.RazorAssemblyInfo.cs
